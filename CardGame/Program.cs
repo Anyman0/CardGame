@@ -15,7 +15,7 @@ class Program
         Deck d = new Deck(new Card[0]);
         var newDeck = d.CreateDeck();
         //int max = MaxValue("mmerytsm");
-        ShortestPath(new string[] { "5", "A", "B", "C", "D", "E", "A-B", "A-E", "B-C", "B-D", "C-D", "D-E" });
+        ShortestPath(new string[] { "5", "A", "B", "C", "D", "E", "A-B", "A-D", "B-C", "B-D", "C-D", "D-E" });
         
     }
 
@@ -137,8 +137,8 @@ class Program
 
             }
         }
-        Console.WriteLine(resultWithoutDublicates);
-        return strArr;
+                
+        return new string[] { resultWithoutDublicates };
     }
 
     public static string NextPath(List<string> pathList, string moveFrom)  
