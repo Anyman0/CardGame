@@ -20,6 +20,7 @@ class Program
     }
 
     // Task 1
+    // Get the maximum value between 2 similar characters from a string (IE. "MMMWEAM" --> Return should be 3, since there are 'WEA' between M's.
     public static int MaxValue(string str) 
     {
         Dictionary<char, int> differentChars = new Dictionary<char, int>();
@@ -83,6 +84,7 @@ class Program
 
 
     // Task 2
+    // Find the shortest path from given array. (IE. "String[] {"5", "A", "B", "C", "D", "E", "A-C", "A-B", "B-C", B-D", "C-D", "D-E"}. --> Return A-C-D-E. We can skip B in this case.
     public static string[] ShortestPath(string[] strArr)
     {
         int startIndex = int.Parse(strArr[0]);
@@ -161,14 +163,3 @@ class Program
     }
 
 }
-
-
-
-// Task 1
-// Get the maximum value between 2 similar characters from a string (IE. "MMMWEAM" --> Return should be 3, since there are 'WEA' between M's.
-
-// Task 2
-// Find the shortest path from given array. (IE. "String[] {"5", "A", "B", "C", "D", "E", "A-C", "A-B", "B-C", B-D", "C-D", "D-E"}. --> Return A-C-D-E. We can skip B in this case.
-
-// Need to find all that begin with A and end with highest alphabet value first.
-
