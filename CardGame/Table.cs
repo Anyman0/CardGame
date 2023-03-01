@@ -8,9 +8,10 @@ namespace CardGame
 {
     internal class Table
     {
-        public Table(Card[] table) 
+        public List<Card> TableCards;  
+        public Table(List<Card> table) 
         {
-
+            TableCards= table;
         }
 
         public void ClearTable(Table table)
@@ -18,9 +19,18 @@ namespace CardGame
 
         }
 
-        public void ClearTableToPlayer(Card[] playerHand, Table table)
+        public void ClearTableToPlayer(Player player, Table table)
         {
             
         }
+
+        public string DisplayTable(int tableSize, Card cardOnTop)
+        {
+            string visibleDeckSize;
+            if(tableSize >= 10) visibleDeckSize = $"\nTABLE:        \n┌──┐\n│{tableSize}│\n└──┘     Card on top: {cardOnTop.Value}";  
+            else visibleDeckSize = $"\nTABLE:   \n┌──┐\n│{tableSize} │\n└──┘     Card on top: {cardOnTop.Value}";
+            return visibleDeckSize;
+        }
+
     }
 }

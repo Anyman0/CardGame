@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace CardGame
 {
-    internal class Hand
+    internal class Hand : Player
     {
         private const int _maxDrawValue = 5;
-        public Hand(Card[] cards) 
+        public int MaxDrawValue = _maxDrawValue;
+        
+        public Hand(string name, List<Card> cards) : base(name, cards)
         { 
-
-        }
-
-        public void PlayCard(Card card)
-        {
-
-        }
+            
+        }        
     }
 }

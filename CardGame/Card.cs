@@ -15,7 +15,13 @@ namespace CardGame
         public Card(int value) 
         {
             Value = value;
-        }             
+        }     
+        
+        public string PresentCard(Card card)
+        {
+            string visibleCard = $"┌─┐\n│{card.Value}│\n└─┘";
+            return visibleCard;
+        }
 
     }
 }
